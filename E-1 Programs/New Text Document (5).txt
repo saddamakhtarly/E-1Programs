@@ -1,0 +1,347 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Second_Programs
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            //1st Apple and Orange
+            //int s = 7, t = 11, a = 5, b = 15,  apple = 0, Orange = 0;
+
+            //int[] apples = { -2, 2, 1 };
+            //int[] Oranges = { 5, -6 };
+
+            //for (int i = 0; i < apples.Length; i++)
+            //{
+            //    if (a + apples[i] >= s && a + apples[i] <= t)
+            //    {
+            //        ++apple;
+            //    }
+
+            //}
+            //for (int i = 0; i < Oranges.Length; i++)
+            //{
+            //    if (b + Oranges[i] >= s && b + Oranges[i] <= t)
+            //    {
+            //        ++Orange;
+            //    }
+
+            //}
+            //Console.WriteLine($"Oranges: {Orange} Apples: {apple}");
+
+
+
+
+            //2nd Kangaroo that two examples sl(same location)
+
+            // int x1 = 0, v1 = 3, x2 = 4, v2 = 2;
+
+            // int x1 = 0, v1 = 2, x2 = 5, v2 = 3;
+
+            //string sl = "0";
+            //if (x1 < x2 && v1 < v2)
+            //    sl = "no";
+
+            //else if (x2 < x1 && v2 < v1)
+            //    sl = "no";
+            //else if (x2 < x1)
+            //{
+            //    int jumbs = (x1 - x2) / (v2 - v1);
+            //    if (jumbs % 1 == 0)
+            //        sl = "yes";
+            //    else
+            //        sl = "no";
+            //}
+            //else
+            //{
+            //    int jumbs = (x2 - x1) / (v1 - v2);
+            //    if (jumbs % 1 == 0)
+            //        sl = "yes";
+            //    else
+            //        sl = "no";
+            //}
+
+            //Console.WriteLine(sl);
+
+
+
+
+            //3rd Between Two Sets
+
+            //int[] first_input = { 2, 4 };
+            //int[] second_input = { 16, 32, 96 };
+
+            //int x = 1;
+            //int r = 0;
+            //int j = 0;
+
+            //int  max_val_first = 0;
+            //int max_val_second = 0;
+            ////find max value from two arrays and store in Max_Array_value
+            //int Max_Array_value = 0;
+
+            //for (int i = 0; i < first_input.Length; i++)
+            //{
+            //    if (max_val_first< first_input[i])
+            //    {
+            //        max_val_first =first_input[i];
+            //    }
+            //}
+            //for (int i = 0; i < second_input.Length; i++)
+            //{
+            //    if (max_val_second < second_input[i])
+            //    {
+            //        max_val_second =second_input[i];
+            //    }
+            //}
+            //if (max_val_first>max_val_second)
+            //{
+            //  Max_Array_value=max_val_first;
+            //}
+            //else
+            //{ Max_Array_value = max_val_second; }
+
+            //int total = 0;
+            //int[] d = new int[Max_Array_value];
+            //for (x = 1; x < Max_Array_value; x++)
+            //{
+            //    int c = 0;
+            //    for (int i = 0; i < first_input.Length; i++)
+            //    {
+            //        if (x % first_input[i] == 0 && x >= first_input[i])
+            //        {
+            //            c++;
+            //        }
+            //    }
+            //    if (c == first_input.Length)
+            //    {
+            //        d[j] = x;
+            //        r++;
+            //        j++;
+            //    }
+            //}
+            //for (j = 0; j < r; j++)
+            //{
+            //    int c = 0;
+            //    for (int i = 0; i < second_input.Length; i++)
+            //    {
+            //        if (second_input[i] % d[j] == 0)
+            //        {
+            //            c++;
+            //        }
+            //    }
+            //    if (c == second_input.Length)
+            //    {
+            //        total++;
+            //    }
+            //}
+            //Console.WriteLine(total);
+
+            //4th Breaking the records  GS(Game Score)
+
+
+
+            int[] GS = { 10, 5, 20, 20, 4, 5, 2, 25, 1 };
+          //  int[] GS = { 3, 4, 21, 36, 10, 28, 35, 5, 24, 42 };
+            int Min_Broken = 0;
+            int Max_Broken = 0;
+            if (GS.Length > 1)
+            {
+                int Min_Record = GS[0];
+                int Max_Record = GS[0];
+                for (int i = 1; i < GS.Length; i++)
+                {
+
+                    if (GS[i] < Min_Record)
+                    {
+                        Min_Record = GS[i];
+                        Min_Broken++;
+                    }
+                    if (GS[i] > Max_Record)
+                    {
+                        Max_Record = GS[i];
+                        Max_Broken++;
+                    }
+
+                }
+                Console.WriteLine($"Maximum Record Broken: {Max_Broken}\nMinimum Record Broken: {Min_Broken}");
+                  }
+
+            //5th Birthday Chocolate
+
+            //int[] cbv = { 1, 2, 1, 3, 2 };
+            //int birthday = 3;
+            //int birthMonth = 2;
+            //var totalWays = 0;
+
+
+            //if (cbv.Length >= birthMonth)
+            //{
+            //    var barPartSum = 0;
+            //    for (int i = 0; i < birthMonth; i++)
+            //        barPartSum += cbv[i];
+
+            //    if (barPartSum == birthday)
+            //        totalWays++;
+
+            //    for (int i = 0; i < cbv.Length - birthMonth; i++)
+            //    {
+            //        barPartSum = barPartSum - cbv[i] + cbv[i + birthMonth];
+
+            //        if (barPartSum == birthday)
+            //            totalWays++;
+            //    }
+            //}
+            //Console.WriteLine(totalWays);
+
+            //6th Divisible Sum Pairs
+            //divisible sum paires
+
+
+            //int n = 6;
+            //int k = 3;
+            //int a = 0;
+            //int total = 0;
+            //int[] ar = { 1, 3, 2, 6, 1, 2 };
+
+            //for (int i = 0; i < n - 1; i++)
+            //{
+            //    for (int j = i + 1; j < n; j++)
+            //    {
+            //        a = ar[i] + ar[j];
+            //        if (a % k == 0)
+            //            total++;
+
+            //    }
+            //}
+            //Console.WriteLine(total);
+
+
+            //7th
+            //BTC bird type count
+            //MBTC maximum bird type count
+            //input must be more that 0
+
+
+            //int[] Birds = {1,2,3,4,5,5,2};
+
+            //int max = 0;
+            //int min = 0;
+            //for (int i = 0; i <Birds.Length ; i++)
+            //{
+            //    if (max<=Birds[i])
+            //    {
+            //        max = Birds[i];
+            //    }
+            //}
+
+            //int[] BTC = new int[max];
+            //for (int i = 0; i < Birds.Length; i++)
+            //{
+
+            //    BTC[Birds[i] - 1]++;
+            //}             
+            //int MBTC = BTC[min];
+
+            //int maxBirdType = 1;
+            //for (int i = 1; i < max; i++)
+
+            //{
+            //    if (BTC[i] > MBTC)
+            //    {
+            //        MBTC = BTC[i];
+            //        maxBirdType = i + 1;
+            //    }
+            //    if (BTC[i] == MBTC && i + 1 < maxBirdType)
+
+            //        maxBirdType = i + 1;
+            //}
+            //Console.WriteLine(maxBirdType); 
+
+            //8th Day of the Programmer
+
+
+            //Console.WriteLine("Please enter the year");
+            //int year_enter = Convert.ToInt32(Console.ReadLine());
+
+            //String date = "";
+            //if (year_enter < 1918)
+            //{
+            //    date += (year_enter % 4 == 0) ? "12.09." + year_enter : "13.09." + year_enter;
+            //}
+            //else if (year_enter == 1918)
+            //{
+            //    date += "26.09." + year_enter;
+            //}
+            //else
+            //{
+            //    date += ((year_enter % 400 == 0) ||
+            //    (year_enter % 4 == 0 && year_enter % 100 != 0)) ? "12.09." + year_enter : "13.09." + year_enter;
+            //}
+            //Console.WriteLine(date);
+
+
+
+            //9th Anna paid
+
+
+            Console.WriteLine("Enter Anna Paid");
+            int Anna_Payed = Convert.ToInt32(Console.ReadLine());
+
+            int[] items = { 3, 10, 2, 9 };
+            int NotEat_Anna = 10;
+
+
+            int Total_Bill = 0;
+            int shared_able_bill;
+            int Anna_Bill;
+
+            for (int i = 0; i < items.Length; i++)
+            {
+                Total_Bill += items[i];
+
+            }
+
+            shared_able_bill = Total_Bill - NotEat_Anna;
+            Anna_Bill = shared_able_bill / 2;
+
+            if (Anna_Payed > Anna_Bill)
+            {
+                int over_charged = Anna_Payed - Anna_Bill;
+                Console.WriteLine($"Over Chared: { over_charged}$");
+            }
+            else
+            {
+                Console.WriteLine("Bon Appetit");
+            }
+
+
+            ////  10th Sock Merchant
+
+            //int[] socks = { 10, 20, 20, 10, 10, 30, 50, 10, 20 };
+            //var SameColors = 0;
+            //var S_Colors = new Dictionary<int, int>();
+
+            //foreach (var s in socks)
+            //{
+            //    if (S_Colors.ContainsKey(s))
+            //    {
+            //        SameColors++;
+            //        S_Colors.Remove(s);
+            //    }
+            //    else
+            //        S_Colors.Add(s, 1);
+            //}
+            //Console.WriteLine(SameColors);
+            Console.ReadKey();
+        }
+
+
+
+    }
+}
